@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "Woconsult - Global Education Consulting Website",
   "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "start": "vite",
-    "vercel-build": "vite build"
+    "start": "vite"
   },
   "keywords": [
     "education",
