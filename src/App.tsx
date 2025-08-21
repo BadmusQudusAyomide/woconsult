@@ -9,7 +9,6 @@ import DestinationsCarousel from "./components/DestinationsCarousel";
 import Services from "./components/Services";
 import Destinations from "./components/Destinations";
 import Stats from "./components/Stats";
-import Partners from "./components/Partners";
 import Testimonials from "./components/Testimonials";
 import Events from "./components/Events";
 import FAQ from "./components/FAQ";
@@ -29,7 +28,7 @@ function App() {
         <Services />
         <Destinations />
         <Stats />
-        <Partners />
+
         <Testimonials />
         <Events />
         <FAQ />

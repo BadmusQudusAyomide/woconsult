@@ -71,80 +71,136 @@ const DestinationsCarousel: React.FC = () => {
   return (
     <section className="section-padding bg-white">
       <div className="container-custom">
-        <h3 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-10">
-          Choose Your Favorite Destination!
-        </h3>
-        <div className="relative overflow-hidden rounded-2xl shadow">
-          {/* image block */}
-          <div className="relative h-80 md:h-96 w-full">
-            <img
-              src={currentItem.image}
-              alt={currentItem.name}
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-            {/* circular flag overlapping bottom middle */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-10">
-              <div className="w-24 h-24 md:w-28 md:h-28 rounded-full ring-4 ring-white shadow-xl bg-white overflow-hidden flex items-center justify-center">
-                <img
-                  src={currentItem.flagUrl}
-                  alt={`${currentItem.name} flag`}
-                  className="h-full w-full object-cover"
-                />
+        {/* Header Section */}
+        <div className="text-center mb-10 sm:mb-12">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Choose Your Favorite Destination!
+          </h3>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover amazing study destinations around the world
+          </p>
+        </div>
+
+        {/* Mobile Carousel - Hidden on laptop */}
+        <div className="lg:hidden">
+          <div className="relative overflow-hidden rounded-2xl shadow">
+            {/* image block */}
+            <div className="relative h-64 sm:h-72 md:h-80 w-full">
+              <img
+                src={currentItem.image}
+                alt={currentItem.name}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              {/* circular flag overlapping bottom middle */}
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-10">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full ring-4 ring-white shadow-xl bg-white overflow-hidden flex items-center justify-center">
+                  <img
+                    src={currentItem.flagUrl}
+                    alt={`${currentItem.name} flag`}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* info card - larger height */}
-          <div className="bg-white/95 backdrop-blur px-6 pt-14 pb-8 min-h-56 flex flex-col items-center text-center">
-            <h4 className="text-xl md:text-2xl font-extrabold text-gray-900 tracking-wide mb-2">
-              {currentItem.name}
-            </h4>
-            <p className="text-gray-700 text-sm md:text-base mb-5 max-w-3xl">
-              {currentItem.description}
-            </p>
-            <button className="btn-primary">Learn More</button>
-          </div>
+            {/* info card - larger height */}
+            <div className="bg-white/95 backdrop-blur px-4 sm:px-6 pt-12 sm:pt-14 pb-6 sm:pb-8 min-h-48 sm:min-h-56 flex flex-col items-center text-center">
+              <h4 className="text-lg sm:text-xl md:text-2xl font-extrabold text-gray-900 tracking-wide mb-2">
+                {currentItem.name}
+              </h4>
+              <p className="text-gray-700 text-xs sm:text-sm md:text-base mb-4 sm:mb-5 max-w-3xl">
+                {currentItem.description}
+              </p>
+              <button className="btn-primary text-sm sm:text-base">
+                Learn More
+              </button>
+            </div>
 
-          <button
-            onClick={goPrev}
-            aria-label="Previous"
-            className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="w-5 h-5"
+            <button
+              onClick={goPrev}
+              aria-label="Previous"
+              className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 sm:p-3 transition-all duration-200 hover:scale-110"
             >
-              <path d="M15.75 19.5L8.25 12l7.5-7.5" />
-            </svg>
-          </button>
-          <button
-            onClick={goNext}
-            aria-label="Next"
-            className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="w-5 h-5"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-4 h-4 sm:w-5 sm:h-5"
+              >
+                <path d="M15.75 19.5L8.25 12l7.5-7.5" />
+              </svg>
+            </button>
+            <button
+              onClick={goNext}
+              aria-label="Next"
+              className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 sm:p-3 transition-all duration-200 hover:scale-110"
             >
-              <path d="M8.25 4.5L15.75 12l-7.5 7.5" />
-            </svg>
-          </button>
-          <div className="absolute bottom-3 inset-x-0 flex items-center justify-center gap-2">
-            {items.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrent(idx)}
-                className={`h-2.5 rounded-full ${
-                  idx === current ? "w-6 bg-white" : "w-2.5 bg-white/60"
-                }`}
-                aria-label={`Go to ${items[idx].name}`}
-              />
-            ))}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-4 h-4 sm:w-5 sm:h-5"
+              >
+                <path d="M8.25 4.5L15.75 12l-7.5 7.5" />
+              </svg>
+            </button>
+            <div className="absolute bottom-2 sm:bottom-3 inset-x-0 flex items-center justify-center gap-1 sm:gap-2">
+              {items.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCurrent(idx)}
+                  className={`h-2 sm:h-2.5 rounded-full transition-all duration-300 ${
+                    idx === current
+                      ? "w-6 sm:w-8 bg-white"
+                      : "w-2 sm:w-2.5 bg-white/60"
+                  }`}
+                  aria-label={`Go to ${items[idx].name}`}
+                />
+              ))}
+            </div>
           </div>
+        </div>
+
+        {/* Laptop Grid - 3 cards side by side, hidden on mobile */}
+        <div className="hidden lg:grid lg:grid-cols-3 gap-8">
+          {items.slice(0, 3).map((item, index) => (
+            <div
+              key={index}
+              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+            >
+              {/* Image */}
+              <div className="relative h-64 w-full">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                {/* Flag badge */}
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-10">
+                  <div className="w-20 h-20 rounded-full ring-4 ring-white shadow-xl bg-white overflow-hidden flex items-center justify-center">
+                    <img
+                      src={item.flagUrl}
+                      alt={`${item.name} flag`}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="bg-white p-6">
+                <h4 className="text-2xl font-extrabold text-gray-900 tracking-wide mb-3 text-center">
+                  {item.name}
+                </h4>
+                <p className="text-gray-700 text-base mb-6 text-center leading-relaxed">
+                  {item.description}
+                </p>
+                <button className="w-full btn-primary text-base">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

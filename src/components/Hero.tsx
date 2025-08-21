@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative h-[45vh] md:h-[55vh] w-full overflow-hidden"
+      className="relative h-[50vh] sm:h-[55vh] md:h-[60vh] lg:h-[65vh] xl:h-[70vh] w-full overflow-hidden"
     >
       {/* Slides */}
       <div className="absolute inset-0">
@@ -56,13 +56,13 @@ const Hero: React.FC = () => {
       <button
         onClick={goPrev}
         aria-label="Previous slide"
-        className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-3"
+        className="absolute left-2 sm:left-3 md:left-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 sm:p-3 transition-all duration-200 hover:scale-110"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="w-6 h-6"
+          className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
         >
           <path d="M15.75 19.5L8.25 12l7.5-7.5" />
         </svg>
@@ -70,28 +70,28 @@ const Hero: React.FC = () => {
       <button
         onClick={goNext}
         aria-label="Next slide"
-        className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-3"
+        className="absolute right-2 sm:right-3 md:right-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 sm:p-3 transition-all duration-200 hover:scale-110"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="w-6 h-6"
+          className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
         >
           <path d="M8.25 4.5L15.75 12l-7.5 7.5" />
         </svg>
       </button>
 
       {/* Indicators */}
-      <div className="absolute bottom-4 inset-x-0 z-10 flex items-center justify-center gap-2">
+      <div className="absolute bottom-2 sm:bottom-3 md:bottom-4 inset-x-0 z-10 flex items-center justify-center gap-1 sm:gap-2">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrent(index)}
-            className={`h-2.5 rounded-full transition-all duration-300 ${
+            className={`h-2 sm:h-2.5 rounded-full transition-all duration-300 ${
               index === current
-                ? "w-6 bg-white"
-                : "w-2.5 bg-white/60 hover:bg-white/80"
+                ? "w-6 sm:w-8 bg-white"
+                : "w-2 sm:w-2.5 bg-white/60 hover:bg-white/80"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
