@@ -214,21 +214,6 @@ const Footer: React.FC = () => {
           </span>
         </a>
       </div>
-
-      {/* Apply Now Float Button */}
-      <div className="fixed bottom-6 left-6 z-50">
-        <a
-          href="#apply"
-          className="w-16 h-16 bg-primary-600 hover:bg-primary-700 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
-          aria-label="Apply Now"
-        >
-          <span className="text-white font-bold text-xs text-center leading-tight group-hover:scale-110 transition-transform duration-300">
-            APPLY
-            <br />
-            NOW
-          </span>
-        </a>
-      </div>
     </footer>
   );
 };
