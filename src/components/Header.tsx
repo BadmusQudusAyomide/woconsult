@@ -1,37 +1,57 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: 'HOME', href: '#home' },
-    { name: 'STUDY ABROAD', href: '#study-abroad', submenu: [
-      { name: 'STUDY IN UK', href: '#uk' },
-      { name: 'STUDY IN IRELAND', href: '#ireland' },
-      { name: 'STUDY IN CANADA', href: '#canada' },
-      { name: 'STUDY IN USA', href: '#usa' },
-      { name: 'STUDY IN AUSTRALIA', href: '#australia' }
-    ]},
-    { name: 'ABOUT US', href: '#about', submenu: [
-      { name: 'WHO WE ARE', href: '#who-we-are' },
-      { name: 'OUR TEAM', href: '#our-team' }
-    ]},
-    { name: 'SERVICES', href: '#services', submenu: [
-      { name: 'STUDENT VISA', href: '#student-visa' },
-      { name: 'SPOUSE VISA', href: '#spouse-visa' }
-    ]},
-    { name: 'BLOGS', href: '#blogs' },
-    { name: 'REQUIREMENTS', href: '#requirements', submenu: [
-      { name: 'BANGLADESH', href: '#bangladesh' },
-      { name: 'NIGERIA', href: '#nigeria' },
-      { name: 'GHANA', href: '#ghana' }
-    ]},
-    { name: 'GALLERY', href: '#gallery', submenu: [
-      { name: 'EDUCATION EXPO', href: '#expo' },
-      { name: 'CAMPUS VISITS', href: '#campus' },
-      { name: 'OTHERS', href: '#others' }
-    ]},
-    { name: 'CONTACT US', href: '#contact' }
+    { name: "HOME", href: "#home" },
+    {
+      name: "STUDY ABROAD",
+      href: "#study-abroad",
+      submenu: [
+        { name: "STUDY IN UK", href: "#uk" },
+        { name: "STUDY IN IRELAND", href: "#ireland" },
+        { name: "STUDY IN CANADA", href: "#canada" },
+        { name: "STUDY IN USA", href: "#usa" },
+        { name: "STUDY IN AUSTRALIA", href: "#australia" },
+      ],
+    },
+    {
+      name: "ABOUT US",
+      href: "#about",
+      submenu: [
+        { name: "WHO WE ARE", href: "#who-we-are" },
+        { name: "OUR TEAM", href: "#our-team" },
+      ],
+    },
+    {
+      name: "SERVICES",
+      href: "#services",
+      submenu: [
+        { name: "STUDENT VISA", href: "#student-visa" },
+        { name: "SPOUSE VISA", href: "#spouse-visa" },
+      ],
+    },
+    { name: "BLOGS", href: "#blogs" },
+    {
+      name: "REQUIREMENTS",
+      href: "#requirements",
+      submenu: [
+        { name: "BANGLADESH", href: "#bangladesh" },
+        { name: "NIGERIA", href: "#nigeria" },
+        { name: "GHANA", href: "#ghana" },
+      ],
+    },
+    {
+      name: "GALLERY",
+      href: "#gallery",
+      submenu: [
+        { name: "EDUCATION EXPO", href: "#expo" },
+        { name: "CAMPUS VISITS", href: "#campus" },
+        { name: "OTHERS", href: "#others" },
+      ],
+    },
+    { name: "CONTACT US", href: "#contact" },
   ];
 
   return (
@@ -74,12 +94,13 @@ const Header: React.FC = () => {
 
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a href="mailto:info@woconsult.com" className="text-primary-600 hover:text-primary-700 text-sm font-medium">
+            <a
+              href="mailto:info@woconsult.com"
+              className="text-primary-600 hover:text-primary-700 text-sm font-medium"
+            >
               info@woconsult.com
             </a>
-            <button className="btn-primary">
-              Apply Now
-            </button>
+            <button className="btn-primary">Apply Now</button>
           </div>
 
           {/* Mobile menu button */}
@@ -88,11 +109,26 @@ const Header: React.FC = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 hover:text-primary-600 p-2"
             >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
                 {isMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
                 )}
               </svg>
             </button>
@@ -127,12 +163,13 @@ const Header: React.FC = () => {
                 </div>
               ))}
               <div className="pt-4 border-t">
-                <a href="mailto:info@woconsult.com" className="block px-3 py-2 text-base font-medium text-primary-600">
+                <a
+                  href="mailto:info@woconsult.com"
+                  className="block px-3 py-2 text-base font-medium text-primary-600"
+                >
                   info@woconsult.com
                 </a>
-                <button className="w-full mt-2 btn-primary">
-                  Apply Now
-                </button>
+                <button className="w-full mt-2 btn-primary">Apply Now</button>
               </div>
             </div>
           </div>
