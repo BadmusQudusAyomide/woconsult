@@ -64,23 +64,36 @@ const Header: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-8">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 <a
                   href={item.href}
-                  className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                  className="flex items-center gap-1 text-[13px] tracking-wide text-gray-700 hover:text-primary-600 px-2 py-2 transition-colors duration-200"
                 >
-                  {item.name}
+                  <span>{item.name}</span>
+                  {item.submenu && (
+                    <svg
+                      className="w-3.5 h-3.5 text-gray-500 group-hover:text-primary-600"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.08z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  )}
                 </a>
                 {item.submenu && (
-                  <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <div className="py-1">
+                  <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="py-2">
                       {item.submenu.map((subitem) => (
                         <a
                           key={subitem.name}
                           href={subitem.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-600"
+                          className="block px-4 py-2 text-[13px] text-gray-700 hover:bg-gray-50 hover:text-primary-600"
                         >
                           {subitem.name}
                         </a>
@@ -107,7 +120,7 @@ const Header: React.FC = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-primary-600 p-2"
+              className="flex items-center gap-2 text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md border border-gray-200"
             >
               <svg
                 className="h-6 w-6"
@@ -131,6 +144,7 @@ const Header: React.FC = () => {
                   />
                 )}
               </svg>
+              <span className="text-sm font-medium">Menu</span>
             </button>
           </div>
         </div>

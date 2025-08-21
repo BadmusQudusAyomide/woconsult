@@ -1,76 +1,111 @@
-import React from 'react';
+import React, { useMemo, useState } from "react";
 
 const Hero: React.FC = () => {
+  const slides = useMemo(
+    () => [
+      {
+        url: "https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1600&q=80",
+        alt: "Airplane wing over clouds at sunset",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1600&q=80",
+        alt: "Jet engine close-up on runway",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1526413232644-8a1a3f1a19a6?auto=format&fit=crop&w=1600&q=80",
+        alt: "Aircraft taking off with blue sky",
+      },
+    ],
+    []
+  );
+
+  const [current, setCurrent] = useState(0);
+
+  const goPrev = () =>
+    setCurrent((idx) => (idx - 1 + slides.length) % slides.length);
+  const goNext = () => setCurrent((idx) => (idx + 1) % slides.length);
+
   return (
-    <section id="home" className="bg-gradient-to-br from-primary-50 to-blue-100 section-padding">
-      <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Welcome to{' '}
-              <span className="text-primary-600">Woconsult</span>
-            </h1>
-            
-            <p className="text-xl text-gray-600 leading-relaxed">
-              At Woconsult, we are committed to empowering students to achieve their dream of studying abroad. 
-              Our dedicated team provides expert guidance throughout every step of the journey, from selecting 
-              the right course and university to navigating the visa application process.
-            </p>
-            
-            <p className="text-lg text-gray-600 leading-relaxed">
-              With a personalized approach and a deep understanding of international education systems, 
-              we ensure that you feel supported and confident in pursuing your academic goals. 
-              Let us be your dependable partner in shaping a future filled with opportunities and success!
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="btn-primary text-lg px-8 py-4">
-                Check Your Eligibility
-              </button>
-              <button className="btn-secondary text-lg px-8 py-4">
-                Learn More
-              </button>
-            </div>
-            
-            <div className="flex items-center space-x-8 pt-4">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary-600">10,000+</div>
-                <div className="text-sm text-gray-600">Students Helped</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary-600">500+</div>
-                <div className="text-sm text-gray-600">Partner Institutions</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary-600">98%</div>
-                <div className="text-sm text-gray-600">Success Rate</div>
-              </div>
-            </div>
+    <section
+      id="home"
+      className="relative h-[70vh] md:h-[80vh] w-full overflow-hidden"
+    >
+      {/* Slides */}
+      <div className="absolute inset-0">
+        {slides.map((slide, index) => (
+          <div
+            key={slide.url}
+            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+              index === current ? "opacity-100" : "opacity-0"
+            }`}
+            aria-hidden={index !== current}
+          >
+            <img
+              src={slide.url}
+              alt={slide.alt}
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
           </div>
-          
-          <div className="relative">
-            <div className="bg-white rounded-2xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-300">
-              <div className="text-center space-y-6">
-                <div className="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto">
-                  <svg className="w-10 h-10 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">Free Assessment</h3>
-                <p className="text-gray-600">
-                  Get a personalized assessment of your eligibility for studying abroad
-                </p>
-                <button className="btn-primary w-full">
-                  Start Assessment
-                </button>
-              </div>
-            </div>
-            
-            {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 w-16 h-16 bg-yellow-400 rounded-full opacity-80 animate-bounce"></div>
-            <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-green-400 rounded-full opacity-80 animate-pulse"></div>
-          </div>
+        ))}
+      </div>
+
+      {/* Content overlay */}
+      <div className="relative z-10 h-full flex items-center justify-center text-center px-4">
+        <div className="max-w-3xl">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-md">
+            Welcome to <span className="text-primary-300">Wo Consult</span>
+          </h1>
+          <p className="mt-4 text-lg md:text-xl text-gray-200">
+            Your trusted partner for global education and visa guidance.
+          </p>
         </div>
+      </div>
+
+      {/* Controls */}
+      <button
+        onClick={goPrev}
+        aria-label="Previous slide"
+        className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-3"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="w-6 h-6"
+        >
+          <path d="M15.75 19.5L8.25 12l7.5-7.5" />
+        </svg>
+      </button>
+      <button
+        onClick={goNext}
+        aria-label="Next slide"
+        className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-3"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="w-6 h-6"
+        >
+          <path d="M8.25 4.5L15.75 12l-7.5 7.5" />
+        </svg>
+      </button>
+
+      {/* Indicators */}
+      <div className="absolute bottom-4 inset-x-0 z-10 flex items-center justify-center gap-2">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrent(index)}
+            className={`h-2.5 rounded-full transition-all duration-300 ${
+              index === current
+                ? "w-6 bg-white"
+                : "w-2.5 bg-white/60 hover:bg-white/80"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
     </section>
   );
