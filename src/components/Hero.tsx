@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative h-[70vh] md:h-[80vh] w-full overflow-hidden"
+      className="relative h-[45vh] md:h-[55vh] w-full overflow-hidden"
     >
       {/* Slides */}
       <div className="absolute inset-0">
@@ -50,17 +50,7 @@ const Hero: React.FC = () => {
         ))}
       </div>
 
-      {/* Content overlay */}
-      <div className="relative z-10 h-full flex items-center justify-center text-center px-4">
-        <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-md">
-            Welcome to <span className="text-primary-300">Wo Consult</span>
-          </h1>
-          <p className="mt-4 text-lg md:text-xl text-gray-200">
-            Your trusted partner for global education and visa guidance.
-          </p>
-        </div>
-      </div>
+      {/* No text overlay; image-only hero */}
 
       {/* Controls */}
       <button

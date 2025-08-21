@@ -2,7 +2,10 @@ import React from "react";
 import Header from "./components/Header";
 import Topbar from "./components/Topbar";
 import Hero from "./components/Hero";
-import About from "./components/About";
+import Welcome from "./components/Welcome";
+import GalleryCarousel from "./components/GalleryCarousel";
+import DestinationsCarousel from "./components/DestinationsCarousel";
+// About removed per request
 import Services from "./components/Services";
 import Destinations from "./components/Destinations";
 import Stats from "./components/Stats";
@@ -20,7 +23,9 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <About />
+        <Welcome />
+        <GalleryCarousel />
+        <DestinationsCarousel />
         <Services />
         <Destinations />
         <Stats />
