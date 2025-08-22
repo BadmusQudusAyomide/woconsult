@@ -22,7 +22,6 @@ const Header: React.FC = () => {
       href: "#about",
       submenu: [
         { name: "WHO WE ARE", href: "#who-we-are" },
-        { name: "OUR TEAM", href: "#our-team" },
       ],
     },
     {
@@ -31,25 +30,6 @@ const Header: React.FC = () => {
       submenu: [
         { name: "STUDENT VISA", href: "#student-visa" },
         { name: "SPOUSE VISA", href: "#spouse-visa" },
-      ],
-    },
-    { name: "BLOGS", href: "#blogs" },
-    {
-      name: "REQUIREMENTS",
-      href: "#requirements",
-      submenu: [
-        { name: "BANGLADESH", href: "#bangladesh" },
-        { name: "NIGERIA", href: "#nigeria" },
-        { name: "GHANA", href: "#ghana" },
-      ],
-    },
-    {
-      name: "GALLERY",
-      href: "#gallery",
-      submenu: [
-        { name: "EDUCATION EXPO", href: "#expo" },
-        { name: "CAMPUS VISITS", href: "#campus" },
-        { name: "OTHERS", href: "#others" },
       ],
     },
     { name: "CONTACT US", href: "#contact" },
@@ -73,8 +53,18 @@ const Header: React.FC = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-primary-600">Woconsult</h1>
+          <div className="flex-shrink-0 lg:-ml-6 xl:-ml-10 2xl:-ml-14">
+            <a href="#home" className="inline-flex items-center gap-3">
+              <img
+                src="/Woconsult Logo.png"
+                alt="Woconsult Logo"
+                className="h-12 w-auto sm:h-14 object-contain"
+                loading="eager"
+              />
+              <span className="hidden sm:inline text-lg sm:text-xl font-extrabold tracking-tight text-gray-900">
+                <span className="text-primary-600">Wo</span> Consult
+              </span>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
@@ -119,18 +109,7 @@ const Header: React.FC = () => {
             ))}
           </nav>
 
-          {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-6">
-            <a
-              href="mailto:info@woconsult.com"
-              className="text-primary-600 hover:text-primary-700 text-sm font-medium transition-colors duration-200"
-            >
-              info@woconsult.com
-            </a>
-            <button className="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2.5 px-6 rounded-lg transition-all duration-200 hover:shadow-lg transform hover:scale-105">
-              Apply Now
-            </button>
-          </div>
+          {/* Contact Info removed per request */}
 
           {/* Mobile menu button */}
           <div className="lg:hidden">
@@ -258,24 +237,7 @@ const Header: React.FC = () => {
                 ))}
               </nav>
 
-              {/* Contact Info in Sidebar */}
-              <div className="p-4 border-t border-gray-200 mt-6">
-                <div className="space-y-4">
-                  <a
-                    href="mailto:info@woconsult.com"
-                    onClick={closeMenu}
-                    className="flex items-center space-x-3 p-3 text-primary-600 hover:bg-primary-50 rounded-lg transition-colors duration-200"
-                  >
-                    <span className="text-lg">📧</span>
-                    <span className="text-sm font-medium">
-                      info@woconsult.com
-                    </span>
-                  </a>
-                  <button onClick={closeMenu} className="w-full btn-primary">
-                    Apply Now
-                  </button>
-                </div>
-              </div>
+              {/* Contact Info in Sidebar removed per request */}
             </div>
           </div>
         </>

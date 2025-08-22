@@ -111,9 +111,9 @@ const DestinationsCarousel: React.FC = () => {
               <p className="text-gray-700 text-xs sm:text-sm md:text-base mb-4 sm:mb-5 max-w-3xl">
                 {currentItem.description}
               </p>
-              <button className="btn-primary text-sm sm:text-base">
+              <a href="#contact" className="btn-primary text-sm sm:text-base inline-block">
                 Learn More
-              </button>
+              </a>
             </div>
 
             <button
@@ -187,17 +187,17 @@ const DestinationsCarousel: React.FC = () => {
                 </div>
               </div>
 
-              {/* Content */}
-              <div className="bg-white p-6">
+              {/* Content: add more top padding to clear the overlapping flag badge */}
+              <div className="bg-white p-6 pt-16">
                 <h4 className="text-2xl font-extrabold text-gray-900 tracking-wide mb-3 text-center">
                   {item.name}
                 </h4>
                 <p className="text-gray-700 text-base mb-6 text-center leading-relaxed">
                   {item.description}
                 </p>
-                <button className="w-full btn-primary text-base">
+                <a href="#contact" className="w-full btn-primary text-base text-center block">
                   Learn More
-                </button>
+                </a>
               </div>
             </div>
           ))}

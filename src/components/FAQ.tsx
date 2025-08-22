@@ -36,10 +36,7 @@ const FAQ: React.FC = () => {
       question: "Are scholarships available in UK?",
       answer: "Yes! There are many scholarships available in the UK for international students. If you would like to secure your own scholarship, please do get in touch with us for guidance and application support."
     },
-    {
-      question: "Does Woconsult offer free consultation?",
-      answer: "Yes! Woconsult Education Ltd offers complete free consultation to every single international prospective student. We are an accredited student visa service company entitled to obtain visas for students at official embassies and consulates from all over the world."
-    }
+    
   ];
 
   const toggleFAQ = (index: number) => {

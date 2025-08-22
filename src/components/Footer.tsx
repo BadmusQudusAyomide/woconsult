@@ -9,7 +9,6 @@ const Footer: React.FC = () => {
       { name: "ABOUT", href: "#about" },
       { name: "STUDY ABROAD", href: "#study-abroad" },
       { name: "SERVICES", href: "#services" },
-      { name: "BLOGS", href: "#blogs" },
       { name: "CONTACT", href: "#contact" },
     ],
     universities: [
@@ -20,11 +19,11 @@ const Footer: React.FC = () => {
       { name: "AUSTRALIA", href: "#australia" },
     ],
     quickLinks: [
-      { name: "APPLY", href: "#apply" },
-      { name: "EVENTS", href: "#events" },
-      { name: "GALLERY", href: "#gallery" },
-      { name: "NEWS", href: "#news" },
-      { name: "CAREER", href: "#career" },
+      { name: "WHO WE ARE", href: "#who-we-are" },
+      { name: "WHAT WE DO", href: "#what-we-do" },
+      { name: "OUR PROMISE", href: "#our-promise" },
+      { name: "SERVICES", href: "#services" },
+      { name: "CONTACT", href: "#contact" },
     ],
   };
 
@@ -38,16 +37,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}
-        ></div>
-      </div>
+    <footer className="bg-primary-600 text-white relative">
 
       <div className="relative">
         <div className="container-custom py-16 lg:py-20">
@@ -56,12 +46,20 @@ const Footer: React.FC = () => {
             {/* Company Info */}
             <div className="lg:col-span-2">
               <div className="mb-6">
-                <h3 className="text-3xl lg:text-4xl font-bold text-primary-400 mb-4">
-                  Woconsult
-                </h3>
-                <div className="w-20 h-1 bg-primary-500 rounded-full mb-6"></div>
+                <div className="flex items-center gap-3 mb-4">
+                  <img
+                    src="/Woconsult Logo.png"
+                    alt="Woconsult Logo"
+                    className="h-10 w-auto sm:h-12 object-contain"
+                    loading="lazy"
+                  />
+                  <h3 className="text-3xl lg:text-4xl font-bold text-white">
+                    Wo Consult
+                  </h3>
+                </div>
+                <div className="w-20 h-1 bg-white/60 rounded-full mb-6"></div>
               </div>
-              <p className="text-gray-300 mb-8 leading-relaxed text-lg">
+              <p className="text-white/90 mb-8 leading-relaxed text-lg">
                 Your trusted partner for international education consulting. We
                 help students achieve their dreams of studying abroad with
                 expert guidance, personalized support, and proven success rates.
@@ -70,23 +68,18 @@ const Footer: React.FC = () => {
               {/* Contact Info */}
               <div className="space-y-3 mb-8">
                 <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-white/15 rounded-full flex items-center justify-center">
                     <span className="text-sm">📧</span>
                   </div>
-                  <span className="text-gray-300">info@woconsult.com</span>
+                  <a href="mailto:w.oconsultltd@gmail.com" className="text-white/90 hover:text-white transition-colors">w.oconsultltd@gmail.com</a>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-white/15 rounded-full flex items-center justify-center">
                     <span className="text-sm">📞</span>
                   </div>
-                  <span className="text-gray-300">+44 123 456 7890</span>
+                  <a href="tel:+2348135388082" className="text-white/90 hover:text-white transition-colors">+2348135388082</a>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center">
-                    <span className="text-sm">📍</span>
-                  </div>
-                  <span className="text-gray-300">London, United Kingdom</span>
-                </div>
+                
               </div>
 
               {/* Social Links */}
@@ -99,7 +92,7 @@ const Footer: React.FC = () => {
                     <a
                       key={social.name}
                       href={social.href}
-                      className="w-12 h-12 bg-gray-800 hover:bg-primary-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                      className="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg"
                       aria-label={social.name}
                     >
                       <span className="text-lg">{social.icon}</span>
@@ -112,7 +105,7 @@ const Footer: React.FC = () => {
             {/* Site Map */}
             <div>
               <h4 className="text-xl font-bold mb-6 text-white flex items-center">
-                <span className="w-8 h-0.5 bg-primary-500 mr-3"></span>
+                <span className="w-8 h-0.5 bg-white/60 mr-3"></span>
                 SITE MAP
               </h4>
               <ul className="space-y-3">
@@ -120,7 +113,7 @@ const Footer: React.FC = () => {
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="text-gray-300 hover:text-primary-400 transition-all duration-300 hover:translate-x-1 inline-block"
+                      className="text-white/90 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block"
                     >
                       {link.name}
                     </a>
@@ -132,7 +125,7 @@ const Footer: React.FC = () => {
             {/* Universities */}
             <div>
               <h4 className="text-xl font-bold mb-6 text-white flex items-center">
-                <span className="w-8 h-0.5 bg-primary-500 mr-3"></span>
+                <span className="w-8 h-0.5 bg-white/60 mr-3"></span>
                 UNIVERSITIES
               </h4>
               <ul className="space-y-3">
@@ -140,7 +133,7 @@ const Footer: React.FC = () => {
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="text-gray-300 hover:text-primary-400 transition-all duration-300 hover:translate-x-1 inline-block"
+                      className="text-white/90 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block"
                     >
                       {link.name}
                     </a>
@@ -151,7 +144,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="border-t border-gray-700 pt-8 mb-8">
+          <div className="border-t border-white/15 pt-8 mb-8">
             <h4 className="text-xl font-bold mb-6 text-white text-center">
               QUICK LINKS
             </h4>
@@ -160,7 +153,7 @@ const Footer: React.FC = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-gray-300 hover:text-primary-400 transition-all duration-300 text-center py-2 px-4 rounded-lg hover:bg-gray-800"
+                  className="text-white/90 hover:text-white transition-all duration-300 text-center py-2 px-4 rounded-lg hover:bg-white/10"
                 >
                   {link.name}
                 </a>
@@ -169,31 +162,31 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Bottom Section */}
-          <div className="border-t border-gray-700 pt-8">
+          <div className="border-t border-white/15 pt-8">
             <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
-              <div className="flex flex-wrap items-center justify-center lg:justify-start space-x-6 text-sm text-gray-400">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start space-x-6 text-sm text-white/80">
                 <a
                   href="#"
-                  className="hover:text-primary-400 transition-colors duration-200"
+                  className="hover:text-white transition-colors duration-200"
                 >
                   Terms of Service
                 </a>
                 <a
                   href="#"
-                  className="hover:text-primary-400 transition-colors duration-200"
+                  className="hover:text-white transition-colors duration-200"
                 >
                   Privacy Policy
                 </a>
                 <a
                   href="#"
-                  className="hover:text-primary-400 transition-colors duration-200"
+                  className="hover:text-white transition-colors duration-200"
                 >
                   Code of Conduct
                 </a>
               </div>
 
-              <div className="text-sm text-gray-400 text-center lg:text-right">
-                © {currentYear} – Woconsult Education Ltd. All rights reserved.
+              <div className="text-sm text-white/80 text-center lg:text-right">
+                © {currentYear} – Wo Consult. All rights reserved.
               </div>
             </div>
           </div>
@@ -203,7 +196,7 @@ const Footer: React.FC = () => {
       {/* WhatsApp Float Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <a
-          href="https://wa.me/44123456789"
+          href="https://wa.me/2348135388082"
           target="_blank"
           rel="noopener noreferrer"
           className="w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"

@@ -381,8 +381,7 @@ const Contact: React.FC = () => {
                     <h4 className="text-lg font-semibold text-gray-900 mb-1">
                       Email Us
                     </h4>
-                    <p className="text-gray-600">info@woconsult.com</p>
-                    <p className="text-gray-600">support@woconsult.com</p>
+                    <p className="text-gray-600">w.oconsultltd@gmail.com</p>
                   </div>
                 </div>
 
@@ -406,64 +405,10 @@ const Contact: React.FC = () => {
                     <h4 className="text-lg font-semibold text-gray-900 mb-1">
                       Call Us
                     </h4>
-                    <p className="text-gray-600">+44 (0) 20 1234 5678</p>
-                    <p className="text-gray-600">+44 (0) 20 1234 5679</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg
-                      className="w-6 h-6 text-primary-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                      />
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-900 mb-1">
-                      Visit Us
-                    </h4>
-                    <p className="text-gray-600">123 Education Street</p>
-                    <p className="text-gray-600">London, UK SW1A 1AA</p>
+                    <p className="text-gray-600">+2348135388082</p>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Office Hours
-              </h3>
-              <div className="space-y-2 text-gray-600">
-                <p>
-                  <span className="font-medium">Monday - Friday:</span> 9:00 AM
-                  - 6:00 PM
-                </p>
-                <p>
-                  <span className="font-medium">Saturday:</span> 10:00 AM - 4:00
-                  PM
-                </p>
-                <p>
-                  <span className="font-medium">Sunday:</span> Closed
-                </p>
-              </div>
-              <p className="text-sm text-gray-500 mt-4">
-                * Emergency support available 24/7 for urgent visa matters
-              </p>
             </div>
           </div>
         </div>

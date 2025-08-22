@@ -57,7 +57,7 @@ const Topbar: React.FC = () => {
       },
       {
         name: "Email",
-        href: "mailto:application@woconsullt.com.ng",
+        href: "mailto:w.oconsultltd@gmail.com",
         icon: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -74,12 +74,7 @@ const Topbar: React.FC = () => {
   );
 
   const phoneNumbers = useMemo(
-    () => [
-      "+44 20 7946 0958",
-      "+1 415 555 0132",
-      "+234 700 123 4567",
-      "+880 9611 234567",
-    ],
+    () => ["+2348135388082"],
     []
   );
   const [currentPhoneIndex, setCurrentPhoneIndex] = useState(0);
@@ -119,9 +114,10 @@ const Topbar: React.FC = () => {
   }, [typedText, isDeleting, currentPhoneIndex, phoneNumbers]);
 
   return (
-    <div className="bg-secondary-900 text-gray-200 text-sm">
+    <div className="bg-primary-600 text-white text-sm">
       <div className="container-custom py-2">
-        {/* Centered row with icons and email, separated by | */}
+        {/* Centered row with icons and email, separated by | */
+        }
         <div className="flex items-center justify-center">
           {socialLinks.map((link, index) => (
             <React.Fragment key={link.name}>
@@ -133,9 +129,7 @@ const Topbar: React.FC = () => {
               >
                 {link.icon}
                 <span className="hidden sm:inline">
-                  {link.name === "Email"
-                    ? "application@engeducation.com"
-                    : link.name}
+                  {link.name === "Email" ? "w.oconsultltd@gmail.com" : link.name}
                 </span>
               </a>
               {index < socialLinks.length - 1 && <IconSeparator />}
@@ -143,11 +137,10 @@ const Topbar: React.FC = () => {
           ))}
         </div>
 
-        {/* Auto-typing phone number line */}
-        <div className="mt-1 text-center text-gray-300">
+        {/* Phone number line (static) */}
+        <div className="mt-1 text-center text-white/90">
           <span className="font-medium">Phone:</span>{" "}
-          <span className="tabular-nums">{typedText}</span>
-          <span className="ml-1 inline-block w-2 h-4 bg-gray-400 animate-pulse align-middle" />
+          <span className="tabular-nums">+2348135388082</span>
         </div>
       </div>
     </div>

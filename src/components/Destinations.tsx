@@ -129,9 +129,9 @@ const Destinations: React.FC = () => {
                   ))}
                 </ul>
 
-                <button className="w-full mt-4 sm:mt-6 btn-primary group-hover:bg-primary-700 transition-colors duration-200 text-sm sm:text-base">
+                <a href="#contact" className="w-full mt-4 sm:mt-6 btn-primary text-center group-hover:bg-primary-700 transition-colors duration-200 text-sm sm:text-base block">
                   Learn More
-                </button>
+                </a>
               </div>
             </div>
           ))}

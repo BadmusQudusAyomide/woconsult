@@ -3,28 +3,6 @@ import React from "react";
 const Services: React.FC = () => {
   const services = [
     {
-      title: "Free Counselling",
-      description:
-        "Get expert advice on course selection, university choice, and career planning",
-      icon: (
-        <svg
-          className="w-6 h-6 sm:w-8 sm:h-8 text-primary-600"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      ),
-      color: "bg-blue-50",
-      textColor: "text-blue-600",
-    },
-    {
       title: "Scholarship Opportunity",
       description:
         "Discover and apply for scholarships to reduce your education costs",
@@ -47,12 +25,12 @@ const Services: React.FC = () => {
       textColor: "text-green-600",
     },
     {
-      title: "Free Assessment",
+      title: "Education Counselling",
       description:
-        "Comprehensive evaluation of your eligibility for international study",
+        "Expert advice on course selection, university choice, and career planning",
       icon: (
         <svg
-          className="w-6 h-6 sm:w-8 sm:h-8 text-purple-600"
+          className="w-6 h-6 sm:w-8 sm:h-8 text-primary-600"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -61,16 +39,16 @@ const Services: React.FC = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={2}
-            d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+            d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
           />
         </svg>
       ),
-      color: "bg-purple-50",
-      textColor: "text-purple-600",
+      color: "bg-blue-50",
+      textColor: "text-blue-600",
     },
     {
-      title: "Free Application",
-      description: "Complete application processing without any hidden fees",
+      title: "University/College Application",
+      description: "Complete application processing with expert guidance",
       icon: (
         <svg
           className="w-6 h-6 sm:w-8 sm:h-8 text-orange-600"
@@ -88,28 +66,6 @@ const Services: React.FC = () => {
       ),
       color: "bg-orange-50",
       textColor: "text-orange-600",
-    },
-    {
-      title: "Visa Application",
-      description:
-        "Expert guidance through the entire visa application process",
-      icon: (
-        <svg
-          className="w-6 h-6 sm:w-8 sm:h-8 text-red-600"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-          />
-        </svg>
-      ),
-      color: "bg-red-50",
-      textColor: "text-red-600",
     },
     {
       title: "Interview Preparation",
@@ -131,49 +87,6 @@ const Services: React.FC = () => {
       ),
       color: "bg-indigo-50",
       textColor: "text-indigo-600",
-    },
-    {
-      title: "Legal Support",
-      description: "Professional legal assistance for complex visa cases",
-      icon: (
-        <svg
-          className="w-6 h-6 sm:w-8 sm:h-8 text-teal-600"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"
-          />
-        </svg>
-      ),
-      color: "bg-teal-50",
-      textColor: "text-teal-600",
-    },
-    {
-      title: "Accommodation Guidance",
-      description:
-        "Help finding suitable accommodation in your study destination",
-      icon: (
-        <svg
-          className="w-6 h-6 sm:w-8 sm:h-8 text-pink-600"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-          />
-        </svg>
-      ),
-      color: "bg-pink-50",
-      textColor: "text-pink-600",
     },
   ];
 
