@@ -5,35 +5,33 @@ const Footer: React.FC = () => {
 
   const footerLinks = {
     main: [
-      { name: "HOME", href: "#home" },
-      { name: "ABOUT", href: "#about" },
-      { name: "STUDY ABROAD", href: "#study-abroad" },
-      { name: "SERVICES", href: "#services" },
-      { name: "CONTACT", href: "#contact" },
+      { name: "HOME", href: "/" },
+      { name: "ABOUT", href: "/#about" },
+      { name: "STUDY ABROAD", href: "/#study-abroad" },
+      { name: "SERVICES", href: "/#services" },
+      { name: "APPLY", href: "/apply" },
+      { name: "CONTACT", href: "/#contact" },
     ],
     universities: [
-      { name: "UK", href: "#uk" },
-      { name: "IRELAND", href: "#ireland" },
-      { name: "USA", href: "#usa" },
-      { name: "CANADA", href: "#canada" },
-      { name: "AUSTRALIA", href: "#australia" },
+      { name: "UK", href: "/#uk" },
+      { name: "IRELAND", href: "/#ireland" },
+      { name: "USA", href: "/#usa" },
+      { name: "CANADA", href: "/#canada" },
+      { name: "AUSTRALIA", href: "/#australia" },
     ],
     quickLinks: [
-      { name: "WHO WE ARE", href: "#who-we-are" },
-      { name: "WHAT WE DO", href: "#what-we-do" },
-      { name: "OUR PROMISE", href: "#our-promise" },
-      { name: "SERVICES", href: "#services" },
-      { name: "CONTACT", href: "#contact" },
+      { name: "WHO WE ARE", href: "/#who-we-are" },
+      { name: "WHAT WE DO", href: "/#what-we-do" },
+      { name: "OUR PROMISE", href: "/#our-promise" },
+      { name: "SERVICES", href: "/#services" },
+      { name: "APPLY", href: "/apply" },
+      { name: "CONTACT", href: "/#contact" },
     ],
   };
 
   const socialLinks = [
-    { name: "Twitter", href: "#", icon: "𝕏" },
-    { name: "Facebook", href: "#", icon: "📘" },
-    { name: "Instagram", href: "#", icon: "📷" },
-    { name: "YouTube", href: "#", icon: "📺" },
-    { name: "Pinterest", href: "#", icon: "📌" },
-    { name: "LinkedIn", href: "#", icon: "💼" },
+    { name: "Instagram", href: "#" },
+    { name: "LinkedIn", href: "#" },
   ];
 
   return (
@@ -77,7 +75,7 @@ const Footer: React.FC = () => {
                   <div className="w-8 h-8 bg-white/15 rounded-full flex items-center justify-center">
                     <span className="text-sm">📞</span>
                   </div>
-                  <a href="tel:+2348135388082" className="text-white/90 hover:text-white transition-colors">+2348135388082</a>
+                  <a href="https://wa.me/2348135388082" target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-white transition-colors">+2348135388082</a>
                 </div>
                 
               </div>
@@ -94,8 +92,18 @@ const Footer: React.FC = () => {
                       href={social.href}
                       className="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg"
                       aria-label={social.name}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <span className="text-lg">{social.icon}</span>
+                      {social.name === "Instagram" ? (
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                          <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3zm11 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM12 7a5 5 0 1 0 .001 10.001A5 5 0 0 0 12 7zm0 2a3 3 0 1 1-.001 6.001A3 3 0 0 1 12 9z" />
+                        </svg>
+                      ) : (
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                          <path d="M4.983 3.5C4.439 3.5 4 3.94 4 4.483v15.034c0 .543.439.983.983.983h15.034c.543 0 .983-.44.983-.983V4.483A.983.983 0 0 0 20.017 3.5H4.983zM8.5 9.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zM7 10h3v7H7v-7zm5 0h2.858v.957h.04c.398-.754 1.37-1.548 2.82-1.548 3.017 0 3.582 1.987 3.582 4.568V17h-3v-3.357c0-.8-.014-1.828-1.114-1.828-1.115 0-1.286.872-1.286 1.77V17h-3v-7z" />
+                        </svg>
+                      )}
                     </a>
                   ))}
                 </div>
@@ -122,25 +130,7 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            {/* Universities */}
-            <div>
-              <h4 className="text-xl font-bold mb-6 text-white flex items-center">
-                <span className="w-8 h-0.5 bg-white/60 mr-3"></span>
-                UNIVERSITIES
-              </h4>
-              <ul className="space-y-3">
-                {footerLinks.universities.map((link) => (
-                  <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="text-white/90 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block"
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            
           </div>
 
           {/* Quick Links */}

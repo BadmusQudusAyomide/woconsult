@@ -15,16 +15,16 @@ const Destinations: React.FC = () => {
       flag: "🇬🇧",
     },
     {
-      name: "IRELAND",
+      name: "USA",
       description:
-        "Home of leading MNC's, supportive learning environment & innovative culture",
+        "World-leading universities, diverse campuses, and cutting-edge research opportunities",
       features: [
-        "Innovation hub",
-        "Friendly environment",
-        "Tech industry focus",
+        "Top-ranked institutions",
+        "Diverse programs",
+        "Strong research culture",
       ],
-      color: "from-green-500 to-green-700",
-      flag: "🇮🇪",
+      color: "from-indigo-500 to-indigo-700",
+      flag: "🇺🇸",
     },
     {
       name: "CANADA",
@@ -50,18 +50,7 @@ const Destinations: React.FC = () => {
       color: "from-yellow-500 to-yellow-700",
       flag: "🇦🇺",
     },
-    {
-      name: "USA",
-      description:
-        "Merit based scholarships and assistance & numerous study choices",
-      features: [
-        "Merit-based scholarships",
-        "Diverse programs",
-        "Research opportunities",
-      ],
-      color: "from-indigo-500 to-indigo-700",
-      flag: "🇺🇸",
-    },
+    
   ];
 
   return (
@@ -137,26 +126,7 @@ const Destinations: React.FC = () => {
           ))}
         </div>
 
-        {/* Assessment Section */}
-        <div className="text-center mt-12 sm:mt-16">
-          <div className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto">
-            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
-              Not sure which destination is right for you?
-            </h3>
-            <p className="text-gray-600 mb-6 text-sm sm:text-base">
-              Take our free assessment quiz to get personalized recommendations
-              based on your preferences, academic background, and career goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-primary text-sm sm:text-base">
-                Take Assessment Quiz
-              </button>
-              <button className="btn-secondary text-sm sm:text-base">
-                Schedule Free Consultation
-              </button>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

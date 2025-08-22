@@ -1,41 +1,17 @@
 import React from "react";
-import Header from "./components/Header";
-import Topbar from "./components/Topbar";
-import Hero from "./components/Hero";
-import Welcome from "./components/Welcome";
-import GalleryCarousel from "./components/GalleryCarousel";
-import DestinationsCarousel from "./components/DestinationsCarousel";
-// About removed per request
-import Services from "./components/Services";
-import Destinations from "./components/Destinations";
-import Stats from "./components/Stats";
-import Testimonials from "./components/Testimonials";
-import Events from "./components/Events";
-import FAQ from "./components/FAQ";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+// Routing and Pages
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import ApplyPage from "./pages/ApplyPage";
 
 function App() {
   return (
-    <div className="App">
-      <Topbar />
-      <Header />
-      <main>
-        <Hero />
-        <Welcome />
-        <GalleryCarousel />
-        <DestinationsCarousel />
-        <Services />
-        <Destinations />
-        <Stats />
-
-        <Testimonials />
-        <Events />
-        <FAQ />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/apply" element={<ApplyPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

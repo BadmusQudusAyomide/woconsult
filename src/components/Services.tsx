@@ -120,11 +120,6 @@ const Services: React.FC = () => {
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
                 {service.description}
               </p>
-              <button
-                className={`text-sm sm:text-base font-medium ${service.textColor} hover:underline transition-colors duration-200`}
-              >
-                Read More
-              </button>
             </div>
           ))}
         </div>
@@ -138,9 +133,9 @@ const Services: React.FC = () => {
               Start your journey with a free consultation. No hidden fees, no
               obligations.
             </p>
-            <button className="btn-primary text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5">
+            <a href="/apply" className="btn-primary text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 inline-block">
               Check Your Eligibility
-            </button>
+            </a>
           </div>
         </div>
       </div>

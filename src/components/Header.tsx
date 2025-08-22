@@ -5,34 +5,30 @@ const Header: React.FC = () => {
   const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
 
   const navigation = [
-    { name: "HOME", href: "#home" },
+    { name: "HOME", href: "/" },
     {
       name: "STUDY ABROAD",
-      href: "#study-abroad",
+      href: "/apply",
       submenu: [
-        { name: "STUDY IN UK", href: "#uk" },
-        { name: "STUDY IN IRELAND", href: "#ireland" },
-        { name: "STUDY IN CANADA", href: "#canada" },
-        { name: "STUDY IN USA", href: "#usa" },
-        { name: "STUDY IN AUSTRALIA", href: "#australia" },
+        { name: "STUDY IN UK", href: "/apply" },
+        { name: "STUDY IN IRELAND", href: "/apply" },
+        { name: "STUDY IN CANADA", href: "/apply" },
+        { name: "STUDY IN USA", href: "/apply" },
+        { name: "STUDY IN AUSTRALIA", href: "/apply" },
       ],
     },
     {
       name: "ABOUT US",
-      href: "#about",
+      href: "/#about",
       submenu: [
-        { name: "WHO WE ARE", href: "#who-we-are" },
+        { name: "WHO WE ARE", href: "/#who-we-are" },
       ],
     },
     {
       name: "SERVICES",
-      href: "#services",
-      submenu: [
-        { name: "STUDENT VISA", href: "#student-visa" },
-        { name: "SPOUSE VISA", href: "#spouse-visa" },
-      ],
+      href: "/#services",
     },
-    { name: "CONTACT US", href: "#contact" },
+    { name: "CONTACT US", href: "/#contact" },
   ];
 
   const toggleDropdown = (itemName: string) => {
@@ -53,16 +49,16 @@ const Header: React.FC = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex-shrink-0 lg:-ml-6 xl:-ml-10 2xl:-ml-14">
-            <a href="#home" className="inline-flex items-center gap-3">
+          <div className="flex-shrink-0">
+            <a href="/" className="inline-flex items-center gap-3">
               <img
                 src="/Woconsult%20Logo.png"
-                alt="Woconsult Logo"
-                className="h-12 w-auto sm:h-14 object-contain"
+                alt="W.O Consult Limited Logo"
+                className="h-14 w-auto sm:h-16 object-contain"
                 loading="eager"
               />
               <span className="hidden sm:inline text-lg sm:text-xl font-extrabold tracking-tight text-gray-900">
-                <span className="text-primary-600">Wo</span> Consult
+                <span className="text-primary-600">W.O</span> Consult Limited
               </span>
             </a>
           </div>

@@ -6,14 +6,14 @@ const Welcome: React.FC = () => {
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            Welcome to <span className="text-primary-600">Wo Consult</span>
+            Welcome to <span className="text-primary-600">W.O Consult Limited</span>
           </h2>
           <div className="mt-6 text-left space-y-10">
             <div id="who-we-are" className="scroll-mt-24">
               <h3 className="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight">Who We Are</h3>
               <div className="mt-2 h-1 w-16 bg-primary-600 rounded md:ml-0 ml-auto mr-auto" />
               <p className="mt-3 text-gray-700 leading-relaxed">
-                At W.O Consults, we are dedicated to transforming educational experiences through innovative consulting services.
+                At W.O Consult Limited, we are dedicated to transforming educational experiences through innovative consulting services.
                 Our mission is to guide and support students in achieving their dream of studying abroad by connecting them with world-class universities.
               </p>
               <p className="mt-3 text-gray-700 leading-relaxed">
@@ -28,10 +28,10 @@ const Welcome: React.FC = () => {
                 We provide a full range of services designed to make the study abroad journey smooth and stress-free:
               </p>
               <ul className="mt-3 space-y-2 text-gray-700">
-                <li>🎓 <span className="font-medium">Educational Consultancy</span> – Tailored advice and guidance for your academic journey.</li>
-                <li>🏫 <span className="font-medium">University Admissions</span> – Secure placements in leading international universities.</li>
-                <li>✈ <span className="font-medium">Visa Assistance</span> – Step-by-step support for visa applications and embassy requirements.</li>
-                <li>🌍 <span className="font-medium">Post-Arrival Support</span> – Guidance to help students settle comfortably in their new destination.</li>
+                <li><span className="font-medium">Educational Consultancy</span> – Tailored advice and guidance for your academic journey.</li>
+                <li><span className="font-medium">University Admissions</span> – Secure placements in leading international universities.</li>
+                <li><span className="font-medium">Visa Assistance</span> – Step-by-step support for visa applications and embassy requirements.</li>
+                <li><span className="font-medium">Post-Arrival Support</span> – Guidance to help students settle comfortably in their new destination.</li>
               </ul>
               <p className="mt-3 text-gray-700 leading-relaxed">
                 We are committed to recruiting only genuine students who are passionate about education and determined to succeed at the world’s leading universities.
@@ -42,7 +42,7 @@ const Welcome: React.FC = () => {
               <h3 className="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight">Our Promise</h3>
               <div className="mt-2 h-1 w-16 bg-primary-600 rounded md:ml-0 ml-auto mr-auto" />
               <p className="mt-3 text-gray-700 leading-relaxed">
-                At W.O Consults, we believe every student deserves access to quality education. That’s why we go the extra mile to:
+                At W.O Consult Limited, we believe every student deserves access to quality education. That’s why we go the extra mile to:
               </p>
               <ul className="mt-3 space-y-2 text-gray-700">
                 <li>• Deliver personalized counseling for each applicant.</li>
