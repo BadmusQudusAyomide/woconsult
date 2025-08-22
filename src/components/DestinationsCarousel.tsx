@@ -60,6 +60,14 @@ const DestinationsCarousel: React.FC = () => {
 
   const currentItem = items[current];
 
+  // For laptop view: show exactly Canada, USA, UK in that order
+  const laptopItems: Destination[] = useMemo(
+    () => ["CANADA", "USA", "UK"]
+      .map((name) => items.find((i) => i.name === name))
+      .filter((i): i is Destination => Boolean(i)),
+    [items]
+  );
+
   // autoplay every 6s
   useEffect(() => {
     const id = window.setInterval(() => {
@@ -163,7 +171,7 @@ const DestinationsCarousel: React.FC = () => {
 
         {/* Laptop Grid - 3 cards side by side, hidden on mobile */}
         <div className="hidden lg:grid lg:grid-cols-3 gap-8">
-          {items.slice(0, 3).map((item, index) => (
+          {laptopItems.map((item, index) => (
             <div
               key={index}
               className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
