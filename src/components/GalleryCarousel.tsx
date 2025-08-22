@@ -4,9 +4,9 @@ const GalleryCarousel: React.FC = () => {
   const images = useMemo(
     () => [
       "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1600&q=80", // graduation/scholarship (keep first)
-      "https://source.unsplash.com/P5aY_FocXAI/1600x900", // Air Transat airplane
-      "https://source.unsplash.com/VV9VyibHYXI/1600x900", // graduation speech
-      "https://source.unsplash.com/ivG8LkDrtjs/1600x900", // themed image
+      "/jason-rosewell-P5aY_FocXAI-unsplash.jpg", // Air Transat airplane
+      "/patricia-beatrix-villanueva-VV9VyibHYXI-unsplash.jpg", // graduation speech
+      "/mana5280-ivG8LkDrtjs-unsplash.jpg", // themed image
     ],
     []
   );

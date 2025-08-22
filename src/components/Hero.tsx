@@ -8,15 +8,15 @@ const Hero: React.FC = () => {
         alt: "Student with graduation cap and diploma symbolizing scholarships",
       },
       {
-        url: "https://source.unsplash.com/P5aY_FocXAI/1600x900",
+        url: "/jason-rosewell-P5aY_FocXAI-unsplash.jpg",
         alt: "Air Transat airplane in flight over blue sky",
       },
       {
-        url: "https://source.unsplash.com/VV9VyibHYXI/1600x900",
+        url: "/patricia-beatrix-villanueva-VV9VyibHYXI-unsplash.jpg",
         alt: "Graduation ceremony with speaker addressing students",
       },
       {
-        url: "https://source.unsplash.com/ivG8LkDrtjs/1600x900",
+        url: "/mana5280-ivG8LkDrtjs-unsplash.jpg",
         alt: "Two men in yellow and black suits (themed image)",
       },
     ],

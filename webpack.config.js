@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.tsx",
@@ -32,6 +33,18 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       favicon: "./public/Woconsult Logo.png",
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "public"),
+          to: path.resolve(__dirname, "dist"),
+          filter: async (resourcePath) => {
+            // exclude index.html because HtmlWebpackPlugin handles it
+            return !resourcePath.endsWith(path.sep + "index.html");
+          },
+        },
+      ],
     }),
   ],
   devServer: {
