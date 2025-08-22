@@ -105,6 +105,32 @@ const Header: React.FC = () => {
             ))}
           </nav>
 
+          {/* Desktop Contact: Email & WhatsApp */}
+          <div className="hidden lg:flex items-center gap-4">
+            <a
+              href="mailto:w.oconsultltd@gmail.com"
+              className="inline-flex items-center gap-2 text-sm text-gray-700 hover:text-primary-600"
+              aria-label="Email us"
+            >
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span className="hidden xl:inline">w.oconsultltd@gmail.com</span>
+            </a>
+            <a
+              href="https://wa.me/2348135388082"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-gray-700 hover:text-primary-600"
+              aria-label="WhatsApp"
+            >
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.52 3.48A11.94 11.94 0 0012.06 0C5.52 0 .22 5.3.22 11.84c0 2.09.55 4.13 1.6 5.93L0 24l6.39-1.67a11.82 11.82 0 005.67 1.45h.01c6.54 0 11.84-5.3 11.84-11.84 0-3.16-1.23-6.13-3.39-8.31zM12.06 21.2h-.01A9.36 9.36 0 016.9 19.8l-.4-.24-3.79.99 1.01-3.69-.26-.38a9.33 9.33 0 01-1.49-5.04C1.97 6.7 6.24 2.43 12.06 2.43c2.5 0 4.85.97 6.62 2.73a9.28 9.28 0 012.75 6.61c0 5.82-4.27 10.99-9.37 10.99zm5.4-7.01c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.46-.89-.77-1.5-1.72-1.68-2.01-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.21-.24-.58-.49-.5-.67-.5-.17-.01-.37-.01-.57-.01s-.52.07-.8.37c-.27.3-1.05 1.02-1.05 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.69.65.71.23 1.35.2 1.86.12.57-.08 1.77-.72 2.02-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35z"/>
+              </svg>
+              <span className="hidden xl:inline">+2348135388082</span>
+            </a>
+          </div>
+
           {/* Contact Info removed per request */}
 
           {/* Mobile menu button */}
@@ -233,7 +259,25 @@ const Header: React.FC = () => {
                 ))}
               </nav>
 
-              {/* Contact Info in Sidebar removed per request */}
+              {/* Contact Info in Sidebar */}
+              <div className="p-4 border-t border-gray-200 mt-4">
+                <a
+                  href="mailto:w.oconsultltd@gmail.com"
+                  className="block w-full mb-2 text-center btn-secondary"
+                  onClick={closeMenu}
+                >
+                  Email: w.oconsultltd@gmail.com
+                </a>
+                <a
+                  href="https://wa.me/2348135388082"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center btn-primary"
+                  onClick={closeMenu}
+                >
+                  WhatsApp: +2348135388082
+                </a>
+              </div>
             </div>
           </div>
         </>
