@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
               <div className="mb-6">
                 <div className="flex items-center gap-3 mb-4">
                   <img
-                    src="/Woconsult Logo.png"
+                    src="/Woconsult%20Logo.png"
                     alt="Woconsult Logo"
                     className="h-10 w-auto sm:h-12 object-contain"
                     loading="lazy"

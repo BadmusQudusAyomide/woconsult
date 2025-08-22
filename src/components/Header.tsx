@@ -56,7 +56,7 @@ const Header: React.FC = () => {
           <div className="flex-shrink-0 lg:-ml-6 xl:-ml-10 2xl:-ml-14">
             <a href="#home" className="inline-flex items-center gap-3">
               <img
-                src="/Woconsult Logo.png"
+                src="/Woconsult%20Logo.png"
                 alt="Woconsult Logo"
                 className="h-12 w-auto sm:h-14 object-contain"
                 loading="eager"
