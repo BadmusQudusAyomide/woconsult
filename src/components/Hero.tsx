@@ -4,16 +4,20 @@ const Hero: React.FC = () => {
   const slides = useMemo(
     () => [
       {
-        url: "https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1600&q=80",
-        alt: "Airplane wing over clouds at sunset",
+        url: "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1600&q=80",
+        alt: "Student with graduation cap and diploma symbolizing scholarships",
       },
       {
-        url: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1600&q=80",
-        alt: "Jet engine close-up on runway",
+        url: "https://source.unsplash.com/P5aY_FocXAI/1600x900",
+        alt: "Air Transat airplane in flight over blue sky",
       },
       {
-        url: "https://images.unsplash.com/photo-1526413232644-8a1a3f1a19a6?auto=format&fit=crop&w=1600&q=80",
-        alt: "Aircraft taking off with blue sky",
+        url: "https://source.unsplash.com/VV9VyibHYXI/1600x900",
+        alt: "Graduation ceremony with speaker addressing students",
+      },
+      {
+        url: "https://source.unsplash.com/ivG8LkDrtjs/1600x900",
+        alt: "Two men in yellow and black suits (themed image)",
       },
     ],
     []
@@ -50,7 +54,6 @@ const Hero: React.FC = () => {
         ))}
       </div>
 
-      {/* No text overlay; image-only hero */}
 
       {/* Controls */}
       <button

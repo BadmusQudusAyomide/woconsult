@@ -14,20 +14,6 @@ const Topbar: React.FC = () => {
   const socialLinks: SocialLink[] = useMemo(
     () => [
       {
-        name: "Facebook",
-        href: "https://facebook.com",
-        icon: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className="w-5 h-5"
-          >
-            <path d="M22 12.06C22 6.477 17.523 2 11.94 2 6.357 2 1.88 6.477 1.88 12.06c0 4.99 3.657 9.129 8.437 9.94v-7.03H7.898v-2.91h2.419V9.845c0-2.39 1.423-3.708 3.6-3.708 1.043 0 2.135.187 2.135.187v2.35h-1.203c-1.186 0-1.557.737-1.557 1.492v1.792h2.648l-.423 2.91h-2.225v7.03C18.343 21.19 22 17.05 22 12.06z" />
-          </svg>
-        ),
-      },
-      {
         name: "Instagram",
         href: "https://instagram.com",
         icon: (

@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../components/Header";
-import Topbar from "../components/Topbar";
 import Hero from "../components/Hero";
 import Welcome from "../components/Welcome";
 import GalleryCarousel from "../components/GalleryCarousel";
@@ -17,7 +16,6 @@ import Footer from "../components/Footer";
 const HomePage: React.FC = () => {
   return (
     <div className="App">
-      <Topbar />
       <Header />
       <main>
         <Hero />
