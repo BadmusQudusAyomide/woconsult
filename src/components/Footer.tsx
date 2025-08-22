@@ -30,8 +30,8 @@ const Footer: React.FC = () => {
   };
 
   const socialLinks = [
-    { name: "Instagram", href: "#" },
-    { name: "LinkedIn", href: "#" },
+    { name: "Instagram", href: "https://www.instagram.com/w.oconsult/" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/w-o-consults/" },
   ];
 
   return (
