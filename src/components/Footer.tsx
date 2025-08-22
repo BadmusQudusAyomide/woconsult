@@ -47,12 +47,12 @@ const Footer: React.FC = () => {
                 <div className="flex items-center gap-3 mb-4">
                   <img
                     src="/Woconsult%20Logo.png"
-                    alt="Woconsult Logo"
-                    className="h-10 w-auto sm:h-12 object-contain"
+                    alt="W.O Consult Limited Logo"
+                    className="h-12 w-auto sm:h-14 object-contain"
                     loading="lazy"
                   />
                   <h3 className="text-3xl lg:text-4xl font-bold text-white">
-                    Wo Consult
+                    W.O Consult Limited
                   </h3>
                 </div>
                 <div className="w-20 h-1 bg-white/60 rounded-full mb-6"></div>
@@ -176,7 +176,7 @@ const Footer: React.FC = () => {
               </div>
 
               <div className="text-sm text-white/80 text-center lg:text-right">
-                © {currentYear} – Wo Consult. All rights reserved.
+                © {currentYear} – W.O Consult Limited. All rights reserved.
               </div>
             </div>
           </div>

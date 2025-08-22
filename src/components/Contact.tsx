@@ -8,6 +8,7 @@ const Contact: React.FC = () => {
     country: "",
     message: "",
   });
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -24,6 +25,9 @@ const Contact: React.FC = () => {
     e.preventDefault();
     // Handle form submission here
     console.log("Form submitted:", formData);
+    setShowSuccess(true);
+    // reset form
+    setFormData({ name: "", email: "", phone: "", country: "", message: "" });
   };
 
   const countries = [
@@ -414,6 +418,21 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {showSuccess && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 p-4">
+          <div className="bg-white rounded-2xl shadow-xl max-w-md w-full p-6 text-center">
+            <div className="mx-auto mb-3 w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+              <svg className="w-7 h-7 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h4 className="text-xl font-semibold text-gray-900">Message sent!</h4>
+            <p className="text-gray-600 mt-1">Thanks for reaching out. We’ll get back to you shortly.</p>
+            <button onClick={() => setShowSuccess(false)} className="btn-primary w-full mt-5">Close</button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

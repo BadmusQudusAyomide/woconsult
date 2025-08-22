@@ -3,10 +3,10 @@ import React, { useEffect, useMemo, useState } from "react";
 const GalleryCarousel: React.FC = () => {
   const images = useMemo(
     () => [
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1600&q=80", // airplane wing over clouds
+      "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1600&q=80", // jet engine close-up
+      "https://images.unsplash.com/photo-1526413232644-8a1a3f1a19a6?auto=format&fit=crop&w=1600&q=80", // aircraft taking off
+      "https://images.unsplash.com/photo-1485988412941-77a35537dae4?auto=format&fit=crop&w=1600&q=80", // airport runway night
     ],
     []
   );

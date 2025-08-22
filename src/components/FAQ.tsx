@@ -101,12 +101,8 @@ const FAQ: React.FC = () => {
               Our expert consultants are here to help. Get in touch with us for personalized answers to your specific questions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-primary">
-                Contact Us
-              </button>
-              <button className="btn-secondary">
-                Schedule Free Consultation
-              </button>
+              <a href="/#contact" className="btn-primary text-center">Contact Us</a>
+              <a href="/#contact" className="btn-secondary text-center">Schedule Free Consultation</a>
             </div>
           </div>
         </div>
