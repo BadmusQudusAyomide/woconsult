@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
                   <div className="w-8 h-8 bg-white/15 rounded-full flex items-center justify-center">
                     <span className="text-sm">📞</span>
                   </div>
-                  <a href="https://wa.me/2348135388082" target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-white transition-colors">+2348135388082</a>
+                  <a href="https://wa.link/pn7ghn" target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-white transition-colors">+2348135388082</a>
                 </div>
                 
               </div>
@@ -186,7 +186,7 @@ const Footer: React.FC = () => {
       {/* WhatsApp Float Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <a
-          href="https://wa.me/2348135388082"
+          href="https://wa.link/pn7ghn"
           target="_blank"
           rel="noopener noreferrer"
           className="w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
